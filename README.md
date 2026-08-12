@@ -2,7 +2,7 @@
 
 WP TurnSite ajoute Cloudflare Turnstile aux formulaires sensibles de WordPress avec validation obligatoire côté serveur.
 
-[![Version](https://img.shields.io/badge/version-1.2.0-2271b1)](https://github.com/TheLibertyWolf/WP-TurnSite/releases)
+[![Version](https://img.shields.io/badge/version-1.2.1-2271b1)](https://github.com/TheLibertyWolf/WP-TurnSite/releases)
 [![PHP](https://img.shields.io/badge/PHP-%3E%3D%208.1-777bb4)](https://www.php.net/)
 [![License](https://img.shields.io/badge/license-GPL--2.0--or--later-46b450)](LICENSE)
 [![Languages](https://img.shields.io/badge/languages-FR%20%7C%20EN%20%7C%20DE%20%7C%20IT%20%7C%20ES%20%7C%20PT-f48120)](#langues)

@@ -1,0 +1,19 @@
+{
+  "name": "jessysystem/wp-turnsite",
+  "description": "Cloudflare Turnstile protection for WordPress, comments, WooCommerce and Multisite.",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "SAS Jessy System",
+      "homepage": "https://jessysystem.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.1"
+  },
+  "support": {
+    "issues": "https://github.com/TheLibertyWolf/WP-TurnSite/issues",
+    "source": "https://github.com/TheLibertyWolf/WP-TurnSite"
+  }
+}
