@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">WP TurnSite</title>
+  <desc id="desc">Bouclier orange protégeant un site web</desc>
+  <rect width="256" height="256" rx="52" fill="#17212b"/>
+  <path d="M128 35 203 65v55c0 47-28 82-75 104-47-22-75-57-75-104V65l75-30Z" fill="#f48120"/>
+  <path d="M128 58 181 79v41c0 35-19 61-53 80-34-19-53-45-53-80V79l53-21Z" fill="#fff" opacity=".95"/>
+  <path d="M93 119h70v50H93z" fill="#17212b" rx="8"/>
+  <path d="M106 119v-13c0-14 9-25 22-25s22 11 22 25v13" fill="none" stroke="#17212b" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="128" cy="143" r="7" fill="#f48120"/>
+  <path d="M128 150v9" stroke="#f48120" stroke-width="6" stroke-linecap="round"/>
+</svg>
