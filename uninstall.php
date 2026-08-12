@@ -7,6 +7,7 @@ if (!defined('WP_UNINSTALL_PLUGIN')) {
 delete_option('turnsite_for_wordpress_settings');
 delete_option('turnsite_for_wordpress_secret');
 delete_option('wp_turnsite_version');
+delete_option('wp_turnsite_last_test');
 
 foreach (wp_roles()->roles as $role_name => $details) {
     $role = get_role($role_name);

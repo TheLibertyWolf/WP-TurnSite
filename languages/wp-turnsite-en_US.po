@@ -1,0 +1,209 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP TurnSite 1.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/TheLibertyWolf/WP-TurnSite/issues\n"
+"POT-Creation-Date: 2026-08-13 00:07+0200\n"
+"PO-Revision-Date: 2026-08-13 00:07+0200\n"
+"Last-Translator: SAS Jessy System <contact@jessysystem.com>\n"
+"Language-Team: English\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Accès refusé."
+msgstr "Access denied."
+
+msgid "Ajoute Cloudflare Turnstile à la connexion et à la récupération de mot de passe WordPress."
+msgstr "Adds Cloudflare Turnstile to WordPress login and password recovery."
+
+msgid "Afficher la clé secrète"
+msgstr "Show secret key"
+
+msgid "Ajoutez le domaine dans les noms d’hôte autorisés."
+msgstr "Add the domain to the allowed hostnames."
+
+msgid "Apparence du widget"
+msgstr "Widget appearance"
+
+msgid ""
+"Appliquée aux tailles normale et compacte. La taille flexible utilise "
+"toujours toute la largeur disponible."
+msgstr ""
+"Applied to normal and compact sizes. Flexible size always uses the full "
+"available width."
+
+msgid "Aucune clé secrète enregistrée."
+msgstr "No secret key is saved."
+
+msgid "Auteur"
+msgstr "Author"
+
+msgid "Automatique (selon le navigateur)"
+msgstr "Automatic (browser preference)"
+
+msgid ""
+"Cette aptitude est attribuée automatiquement aux administrateurs lors de "
+"l’activation."
+msgstr ""
+"This capability is automatically granted to administrators on activation."
+
+msgid "Choisissez « Managed », créez le widget et copiez les deux clés."
+msgstr "Choose “Managed”, create the widget, and copy both keys."
+
+msgid "Clair"
+msgstr "Light"
+
+msgid "Cloudflare a accepté la clé secrète."
+msgstr "Cloudflare accepted the secret key."
+
+msgid "Cloudflare est injoignable"
+msgstr "Cloudflare is unreachable"
+
+msgid "Clé de site"
+msgstr "Site key"
+
+msgid "Clé secrète"
+msgstr "Secret key"
+
+msgid "Clé secrète non testée"
+msgstr "Secret key not tested"
+
+msgid "Clé secrète refusée par Cloudflare"
+msgstr "Secret key rejected by Cloudflare"
+
+msgid "Clé secrète valide"
+msgstr "Valid secret key"
+
+msgid "Compacte — 150 × 140 px"
+msgstr "Compact — 150 × 140 px"
+
+msgid "Connexion"
+msgstr "Login"
+
+msgid "Consulter la documentation Cloudflare"
+msgstr "View Cloudflare documentation"
+
+msgid "Enregistrez une clé secrète avant de lancer le test."
+msgstr "Save a secret key before running the test."
+
+msgid "Flexible — largeur du formulaire"
+msgstr "Flexible — form width"
+
+msgid "Formulaires protégés"
+msgstr "Protected forms"
+
+msgid "Gestion de l’accès"
+msgstr "Access management"
+
+msgid "Impossible de récupérer la clé secrète."
+msgstr "Unable to retrieve the secret key."
+
+msgid "Inscription"
+msgstr "Registration"
+
+msgid "La clé de site est publique. La clé secrète doit rester privée."
+msgstr "The site key is public. The secret key must remain private."
+
+msgid ""
+"La clé secrète n’est jamais affichée dans l’administration ni envoyée au "
+"navigateur."
+msgstr ""
+"The secret key is never displayed in the admin area or sent to the browser."
+
+msgid ""
+"La protection de l’inscription ne réactive pas les inscriptions si WordPress "
+"les a désactivées."
+msgstr ""
+"Registration protection does not re-enable registration when WordPress has "
+"disabled it."
+
+msgid "La réponse Cloudflare est rejetée si elle concerne un autre domaine."
+msgstr "The Cloudflare response is rejected if it belongs to another domain."
+
+msgid "La vérification de sécurité a échoué. Veuillez recommencer."
+msgstr "Security verification failed. Please try again."
+
+msgid "Le format de la clé de site est invalide."
+msgstr "The site key format is invalid."
+
+msgid "Le format de la clé secrète est invalide."
+msgstr "The secret key format is invalid."
+
+msgid "Le nom d’hôte attendu est invalide."
+msgstr "The expected hostname is invalid."
+
+msgid "Les tailles normale et compacte sont centrées dans le formulaire."
+msgstr "Normal and compact sizes are centered in the form."
+
+msgid "Masquer la clé secrète"
+msgstr "Hide secret key"
+
+msgid "Mot de passe perdu"
+msgstr "Lost password"
+
+msgid "Nom d’hôte attendu"
+msgstr "Expected hostname"
+
+msgid "Normale — 300 × 65 px"
+msgstr "Normal — 300 × 65 px"
+
+msgid "Obtenir les clés Cloudflare"
+msgstr "Get Cloudflare keys"
+
+msgid "Ouvrez Turnstile puis choisissez « Add widget »."
+msgstr "Open Turnstile, then choose “Add widget”."
+
+msgid "Ouvrir Cloudflare"
+msgstr "Open Cloudflare"
+
+msgid ""
+"Pour déléguer la configuration de WP TurnSite avec un gestionnaire de rôles, "
+"attribuez l’aptitude :"
+msgstr ""
+"To delegate WP TurnSite configuration with a role manager, grant the "
+"capability:"
+
+msgid "Protection Cloudflare Turnstile des formulaires sensibles de WordPress."
+msgstr "Cloudflare Turnstile protection for sensitive WordPress forms."
+
+msgid "Réponse Cloudflare inattendue."
+msgstr "Unexpected Cloudflare response."
+
+msgid "Réponse Cloudflare invalide."
+msgstr "Invalid Cloudflare response."
+
+msgid "Saisir la clé secrète"
+msgstr "Enter the secret key"
+
+msgid "Sombre"
+msgstr "Dark"
+
+msgid "Supprimer la clé secrète enregistrée"
+msgstr "Delete the saved secret key"
+
+msgid "Taille du widget"
+msgstr "Widget size"
+
+msgid "Tester à nouveau"
+msgstr "Test again"
+
+msgid "Voir le projet sur GitHub"
+msgstr "View project on GitHub"
+
+msgid "WP TurnSite"
+msgstr "WP TurnSite"
+
+#, php-format
+msgid ""
+"WP TurnSite est actif mais incomplet. <a href=\"%s\">Configurer les clés "
+"Cloudflare</a>."
+msgstr ""
+"WP TurnSite is active but incomplete. <a href=\"%s\">Configure Cloudflare "
+"keys</a>."
+
+msgid "Échelle du widget"
+msgstr "Widget scale"
+
+msgid "État de la clé secrète"
+msgstr "Secret key status"

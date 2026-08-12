@@ -42,10 +42,33 @@
     gap: 5px;
 }
 
-.wp-turnsite-github-button .dashicons {
-    font-size: 17px;
+.wp-turnsite-github-button svg {
     height: 17px;
     width: 17px;
+}
+
+.wp-turnsite-key-status {
+    align-items: center;
+    display: flex;
+    gap: 7px;
+}
+
+.wp-turnsite-key-status .dashicons {
+    font-size: 22px;
+    height: 22px;
+    width: 22px;
+}
+
+.wp-turnsite-key-status-success .dashicons {
+    color: #008a20;
+}
+
+.wp-turnsite-key-status-error .dashicons {
+    color: #d63638;
+}
+
+.wp-turnsite-key-status-untested .dashicons {
+    color: #646970;
 }
 
 @media screen and (max-width: 850px) {

@@ -4,7 +4,7 @@ Tags: cloudflare, turnstile, login, security, captcha
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,6 +24,11 @@ La configuration se fait depuis le menu WP TurnSite de l’administration WordPr
 4. Enregistrer les clés Cloudflare et le nom d’hôte.
 
 == Changelog ==
+
+= 1.1.0 =
+* Traductions anglaise, allemande, italienne, espagnole et portugaise.
+* Choix du thème, de la taille et de l’échelle du widget.
+* Interface d’administration en deux colonnes et aptitude délégable.
 
 = 1.0.0 =
 * Première version publique.

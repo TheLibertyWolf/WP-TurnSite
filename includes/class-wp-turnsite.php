@@ -246,19 +246,13 @@ final class WP_TurnSite
 
         $settings = self::settings();
         $secret_is_set = self::secret() !== '';
-        $test_status = isset($_GET['turnsite_test']) ? sanitize_key((string) $_GET['turnsite_test']) : '';
+        $test_status = isset($_GET['turnsite_test'])
+            ? sanitize_key((string) $_GET['turnsite_test'])
+            : sanitize_key((string) get_option('wp_turnsite_last_test', 'untested'));
         ?>
         <div class="wrap">
             <h1><?php esc_html_e('WP TurnSite', 'wp-turnsite'); ?></h1>
             <p><?php esc_html_e('Protection Cloudflare Turnstile des formulaires sensibles de WordPress.', 'wp-turnsite'); ?></p>
-
-            <?php if ($test_status === 'success') : ?>
-                <div class="notice notice-success is-dismissible"><p><?php esc_html_e('La clé secrète a été acceptée par Cloudflare.', 'wp-turnsite'); ?></p></div>
-            <?php elseif ($test_status === 'failure') : ?>
-                <div class="notice notice-error"><p><?php esc_html_e('Cloudflare a refusé la clé secrète.', 'wp-turnsite'); ?></p></div>
-            <?php elseif ($test_status === 'transport') : ?>
-                <div class="notice notice-error"><p><?php esc_html_e('Impossible de joindre Cloudflare. Vérifiez la connectivité sortante.', 'wp-turnsite'); ?></p></div>
-            <?php endif; ?>
 
             <div id="poststuff" class="wp-turnsite-poststuff">
                 <div id="post-body" class="metabox-holder columns-2">
@@ -338,17 +332,33 @@ final class WP_TurnSite
                 <?php submit_button(); ?>
             </form>
 
-            <?php if ($secret_is_set) : ?>
-                        <hr>
-                        <form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
-                            <input type="hidden" name="action" value="turnsite_test_configuration">
-                            <?php wp_nonce_field('turnsite_test_configuration'); ?>
-                            <?php submit_button(__('Tester la clé secrète', 'wp-turnsite'), 'secondary', 'submit', false); ?>
-                        </form>
-            <?php endif; ?>
                     </div>
 
                     <div id="postbox-container-1" class="postbox-container">
+                        <div class="postbox">
+                            <div class="postbox-header"><h2 class="hndle"><?php esc_html_e('État de la clé secrète', 'wp-turnsite'); ?></h2></div>
+                            <div class="inside">
+                                <?php if ($test_status === 'success') : ?>
+                                    <p class="wp-turnsite-key-status wp-turnsite-key-status-success"><span class="dashicons dashicons-yes-alt" aria-hidden="true"></span><strong><?php esc_html_e('Clé secrète valide', 'wp-turnsite'); ?></strong></p>
+                                    <p class="description"><?php esc_html_e('Cloudflare a accepté la clé secrète.', 'wp-turnsite'); ?></p>
+                                <?php elseif (in_array($test_status, ['failure', 'transport'], true)) : ?>
+                                    <p class="wp-turnsite-key-status wp-turnsite-key-status-error"><span class="dashicons dashicons-warning" aria-hidden="true"></span><strong><?php echo esc_html($test_status === 'failure' ? __('Clé secrète refusée par Cloudflare', 'wp-turnsite') : __('Cloudflare est injoignable', 'wp-turnsite')); ?></strong></p>
+                                <?php else : ?>
+                                    <p class="wp-turnsite-key-status wp-turnsite-key-status-untested"><span class="dashicons dashicons-minus" aria-hidden="true"></span><strong><?php esc_html_e('Clé secrète non testée', 'wp-turnsite'); ?></strong></p>
+                                <?php endif; ?>
+
+                                <?php if ($secret_is_set) : ?>
+                                    <form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
+                                        <input type="hidden" name="action" value="turnsite_test_configuration">
+                                        <?php wp_nonce_field('turnsite_test_configuration'); ?>
+                                        <?php submit_button(__('Tester à nouveau', 'wp-turnsite'), 'secondary', 'submit', false); ?>
+                                    </form>
+                                <?php else : ?>
+                                    <p class="description"><?php esc_html_e('Enregistrez une clé secrète avant de lancer le test.', 'wp-turnsite'); ?></p>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+
                         <div class="postbox">
                             <div class="postbox-header"><h2 class="hndle"><?php esc_html_e('Obtenir les clés Cloudflare', 'wp-turnsite'); ?></h2></div>
                             <div class="inside">
@@ -377,7 +387,7 @@ final class WP_TurnSite
                             <div class="inside">
                                 <p><strong>SAS Jessy System</strong></p>
                                 <p><a href="https://jessysystem.com" target="_blank" rel="noopener noreferrer">jessysystem.com</a></p>
-                                <p><a class="button wp-turnsite-github-button" href="https://github.com/TheLibertyWolf/WP-TurnSite" target="_blank" rel="noopener noreferrer"><span class="dashicons dashicons-github" aria-hidden="true"></span><span><?php esc_html_e('Voir le projet sur GitHub', 'wp-turnsite'); ?></span></a></p>
+                                <p><a class="button wp-turnsite-github-button" href="https://github.com/TheLibertyWolf/WP-TurnSite" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .7a11.3 11.3 0 0 0-3.6 22c.6.1.8-.2.8-.5v-2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5A11.3 11.3 0 0 0 12 .7Z"/></svg><span><?php esc_html_e('Voir le projet sur GitHub', 'wp-turnsite'); ?></span></a></p>
                             </div>
                         </div>
                     </div>
@@ -435,6 +445,8 @@ final class WP_TurnSite
                 ? 'failure'
                 : 'success';
         }
+
+        update_option('wp_turnsite_last_test', $status, false);
 
         wp_safe_redirect(add_query_arg('turnsite_test', $status, admin_url('options-general.php?page=' . self::MENU_SLUG)));
         exit;

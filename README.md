@@ -16,6 +16,7 @@ WP TurnSite ajoute Cloudflare Turnstile aux formulaires de connexion et de récu
 - test de la clé secrète depuis le menu d’administration ;
 - page placée sous `Réglages → WP TurnSite` et protégée par `manage_wp_turnsite` ;
 - échec fermé en cas d’erreur Cloudflare lorsqu’une protection est configurée.
+- interface traduite en français, anglais, allemand, italien, espagnol et portugais.
 
 ## Installation
 

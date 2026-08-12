@@ -1,0 +1,205 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the WP TurnSite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: WP TurnSite 1.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/TheLibertyWolf/WP-TurnSite/issues\n"
+"POT-Creation-Date: 2026-08-13 00:07+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Accès refusé."
+msgstr ""
+
+msgid "Ajoute Cloudflare Turnstile à la connexion et à la récupération de mot de passe WordPress."
+msgstr ""
+
+msgid "Afficher la clé secrète"
+msgstr ""
+
+msgid "Ajoutez le domaine dans les noms d’hôte autorisés."
+msgstr ""
+
+msgid "Apparence du widget"
+msgstr ""
+
+msgid ""
+"Appliquée aux tailles normale et compacte. La taille flexible utilise "
+"toujours toute la largeur disponible."
+msgstr ""
+
+msgid "Aucune clé secrète enregistrée."
+msgstr ""
+
+msgid "Auteur"
+msgstr ""
+
+msgid "Automatique (selon le navigateur)"
+msgstr ""
+
+msgid ""
+"Cette aptitude est attribuée automatiquement aux administrateurs lors de "
+"l’activation."
+msgstr ""
+
+msgid "Choisissez « Managed », créez le widget et copiez les deux clés."
+msgstr ""
+
+msgid "Clair"
+msgstr ""
+
+msgid "Cloudflare a accepté la clé secrète."
+msgstr ""
+
+msgid "Cloudflare est injoignable"
+msgstr ""
+
+msgid "Clé de site"
+msgstr ""
+
+msgid "Clé secrète"
+msgstr ""
+
+msgid "Clé secrète non testée"
+msgstr ""
+
+msgid "Clé secrète refusée par Cloudflare"
+msgstr ""
+
+msgid "Clé secrète valide"
+msgstr ""
+
+msgid "Compacte — 150 × 140 px"
+msgstr ""
+
+msgid "Connexion"
+msgstr ""
+
+msgid "Consulter la documentation Cloudflare"
+msgstr ""
+
+msgid "Enregistrez une clé secrète avant de lancer le test."
+msgstr ""
+
+msgid "Flexible — largeur du formulaire"
+msgstr ""
+
+msgid "Formulaires protégés"
+msgstr ""
+
+msgid "Gestion de l’accès"
+msgstr ""
+
+msgid "Impossible de récupérer la clé secrète."
+msgstr ""
+
+msgid "Inscription"
+msgstr ""
+
+msgid "La clé de site est publique. La clé secrète doit rester privée."
+msgstr ""
+
+msgid ""
+"La clé secrète n’est jamais affichée dans l’administration ni envoyée au "
+"navigateur."
+msgstr ""
+
+msgid ""
+"La protection de l’inscription ne réactive pas les inscriptions si WordPress "
+"les a désactivées."
+msgstr ""
+
+msgid "La réponse Cloudflare est rejetée si elle concerne un autre domaine."
+msgstr ""
+
+msgid "La vérification de sécurité a échoué. Veuillez recommencer."
+msgstr ""
+
+msgid "Le format de la clé de site est invalide."
+msgstr ""
+
+msgid "Le format de la clé secrète est invalide."
+msgstr ""
+
+msgid "Le nom d’hôte attendu est invalide."
+msgstr ""
+
+msgid "Les tailles normale et compacte sont centrées dans le formulaire."
+msgstr ""
+
+msgid "Masquer la clé secrète"
+msgstr ""
+
+msgid "Mot de passe perdu"
+msgstr ""
+
+msgid "Nom d’hôte attendu"
+msgstr ""
+
+msgid "Normale — 300 × 65 px"
+msgstr ""
+
+msgid "Obtenir les clés Cloudflare"
+msgstr ""
+
+msgid "Ouvrez Turnstile puis choisissez « Add widget »."
+msgstr ""
+
+msgid "Ouvrir Cloudflare"
+msgstr ""
+
+msgid ""
+"Pour déléguer la configuration de WP TurnSite avec un gestionnaire de rôles, "
+"attribuez l’aptitude :"
+msgstr ""
+
+msgid "Protection Cloudflare Turnstile des formulaires sensibles de WordPress."
+msgstr ""
+
+msgid "Réponse Cloudflare inattendue."
+msgstr ""
+
+msgid "Réponse Cloudflare invalide."
+msgstr ""
+
+msgid "Saisir la clé secrète"
+msgstr ""
+
+msgid "Sombre"
+msgstr ""
+
+msgid "Supprimer la clé secrète enregistrée"
+msgstr ""
+
+msgid "Taille du widget"
+msgstr ""
+
+msgid "Tester à nouveau"
+msgstr ""
+
+msgid "Voir le projet sur GitHub"
+msgstr ""
+
+msgid "WP TurnSite"
+msgstr ""
+
+#, php-format
+msgid ""
+"WP TurnSite est actif mais incomplet. <a href=\"%s\">Configurer les clés "
+"Cloudflare</a>."
+msgstr ""
+
+msgid "Échelle du widget"
+msgstr ""
+
+msgid "État de la clé secrète"
+msgstr ""
