@@ -375,9 +375,9 @@ final class WP_TurnSite
                         <div class="postbox">
                             <div class="postbox-header"><h2 class="hndle"><?php esc_html_e('Auteur', 'wp-turnsite'); ?></h2></div>
                             <div class="inside">
-                                <p><strong>SAS JESSY SYSTEM</strong></p>
+                                <p><strong>SAS Jessy System</strong></p>
                                 <p><a href="https://jessysystem.com" target="_blank" rel="noopener noreferrer">jessysystem.com</a></p>
-                                <p><a class="button" href="https://github.com/TheLibertyWolf/WP-TurnSite" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Voir le projet sur GitHub', 'wp-turnsite'); ?></a></p>
+                                <p><a class="button wp-turnsite-github-button" href="https://github.com/TheLibertyWolf/WP-TurnSite" target="_blank" rel="noopener noreferrer"><span class="dashicons dashicons-github" aria-hidden="true"></span><span><?php esc_html_e('Voir le projet sur GitHub', 'wp-turnsite'); ?></span></a></p>
                             </div>
                         </div>
                     </div>

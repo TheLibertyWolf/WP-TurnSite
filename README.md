@@ -35,11 +35,11 @@ Cloudflare doit autoriser le domaine utilisé par le site. Le serveur doit pouvo
 
 ## Sécurité
 
-Les jetons sont validés côté serveur. La clé secrète n’est jamais rendue dans les pages publiques. Pour signaler une vulnérabilité, contactez SAS JESSY SYSTEM via [jessysystem.com](https://jessysystem.com).
+Les jetons sont validés côté serveur. La clé secrète n’est jamais rendue dans les pages publiques. Pour signaler une vulnérabilité, contactez SAS Jessy System via [jessysystem.com](https://jessysystem.com).
 
 ## Auteur
 
-SAS JESSY SYSTEM — [https://jessysystem.com](https://jessysystem.com)
+SAS Jessy System — [https://jessysystem.com](https://jessysystem.com)
 
 ## Licence
 

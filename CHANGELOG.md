@@ -17,5 +17,6 @@ Toutes les modifications notables de ce projet sont documentées ici.
 - Réglages de taille normale, compacte ou flexible.
 - Échelle réglable de 75 à 100 % pour les widgets de taille fixe.
 - Colonne latérale WordPress avec aide Cloudflare, aptitude délégable et informations de l’auteur.
+- Présentation harmonisée de SAS Jessy System et lien GitHub illustré dans la carte Auteur.
 - Test de la clé secrète depuis WordPress.
 - Documentation, icône, procédure de désinstallation et licence.
