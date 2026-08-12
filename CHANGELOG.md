@@ -2,6 +2,11 @@
 
 Toutes les modifications notables de ce projet sont documentées ici.
 
+## [1.3.0] - 2026-08-13
+
+- Ajout du filtre `wp_turnsite_action_enabled` pour les intégrations tierces.
+- Le rendu et la validation serveur restent centralisés dans WP TurnSite.
+
 ## [1.2.1] - 2026-08-13
 
 - Retrait du formulaire de contact intégré, de son shortcode et de ses réglages.

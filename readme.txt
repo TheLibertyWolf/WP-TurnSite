@@ -4,7 +4,7 @@ Tags: cloudflare, turnstile, login, security, captcha
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 1.2.1
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,6 +28,9 @@ Langues incluses : français, anglais, allemand, italien, espagnol et portugais.
 4. Enregistrer les clés Cloudflare et le nom d’hôte.
 
 == Changelog ==
+
+= 1.3.0 =
+* API d’intégration pour protéger les formulaires de thèmes et d’extensions tierces.
 
 = 1.2.1 =
 * Retrait du formulaire de contact intégré.

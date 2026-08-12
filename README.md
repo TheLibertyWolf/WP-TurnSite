@@ -2,7 +2,7 @@
 
 WP TurnSite ajoute Cloudflare Turnstile aux formulaires sensibles de WordPress avec validation obligatoire côté serveur.
 
-[![Version](https://img.shields.io/badge/version-1.2.1-2271b1)](https://github.com/TheLibertyWolf/WP-TurnSite/releases)
+[![Version](https://img.shields.io/badge/version-1.3.0-2271b1)](https://github.com/TheLibertyWolf/WP-TurnSite/releases)
 [![PHP](https://img.shields.io/badge/PHP-%3E%3D%208.1-777bb4)](https://www.php.net/)
 [![License](https://img.shields.io/badge/license-GPL--2.0--or--later-46b450)](LICENSE)
 [![Languages](https://img.shields.io/badge/languages-FR%20%7C%20EN%20%7C%20DE%20%7C%20IT%20%7C%20ES%20%7C%20PT-f48120)](#langues)
@@ -25,6 +25,7 @@ WP TurnSite ajoute Cloudflare Turnstile aux formulaires sensibles de WordPress a
 - commentaires WordPress et avis produits WooCommerce ;
 - formulaires classiques WooCommerce : connexion, inscription, mot de passe perdu et commande ;
 - inscription d’utilisateurs et de sites WordPress Multisite.
+- API d’intégration pour protéger des formulaires fournis par un thème ou une autre extension.
 
 ## Modules 1.2
 
@@ -38,6 +39,10 @@ Chaque module est activable séparément dans `Réglages → WP TurnSite`.
 | Multisite | Inscription d’un utilisateur et création d’un site via `wp-signup.php` |
 
 Le checkout WooCommerce basé sur les **Checkout Blocks** utilise une API JavaScript différente et n’est pas couvert par le module checkout classique de la version 1.2.
+
+## Intégration d’un formulaire tiers
+
+Une intégration peut autoriser sa propre action avec le filtre `wp_turnsite_action_enabled`, puis utiliser `WP_TurnSite::render_widget()` et `WP_TurnSite::verify()`. Le jeton reste ainsi validé côté serveur par WP TurnSite, avec contrôle de l’action et du nom d’hôte.
 
 ## Langues
 

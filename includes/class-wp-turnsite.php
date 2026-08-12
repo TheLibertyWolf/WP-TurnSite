@@ -516,7 +516,14 @@ final class WP_TurnSite
             return $settings[$module_actions[$action]] === '1';
         }
 
-        return false;
+        /**
+         * Permet à un thème ou à une extension d'enregistrer une action Turnstile
+         * tout en conservant le rendu et la validation dans WP TurnSite.
+         *
+         * @param bool   $enabled État de l'action personnalisée.
+         * @param string $action  Nom de l'action Turnstile demandée.
+         */
+        return (bool) apply_filters('wp_turnsite_action_enabled', false, $action);
     }
 
     public static function enqueue_script(): void

@@ -3,7 +3,7 @@
  * Plugin Name: WP TurnSite
  * Plugin URI: https://github.com/TheLibertyWolf/WP-TurnSite
  * Description: Ajoute Cloudflare Turnstile à la connexion et à la récupération de mot de passe WordPress.
- * Version: 1.2.1
+ * Version: 1.3.0
  * Requires at least: 6.5
  * Requires PHP: 8.1
  * Author: SAS Jessy System
@@ -18,7 +18,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('WP_TURNSITE_VERSION', '1.2.1');
+define('WP_TURNSITE_VERSION', '1.3.0');
 define('WP_TURNSITE_FILE', __FILE__);
 define('WP_TURNSITE_DIR', plugin_dir_path(__FILE__));
 
