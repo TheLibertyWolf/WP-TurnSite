@@ -39,6 +39,11 @@ final class WP_TurnSite
         add_filter('authenticate', [self::class, 'protect_login'], 100, 3);
         add_action('lostpassword_post', [self::class, 'protect_lostpassword'], 5, 1);
         add_filter('registration_errors', [self::class, 'protect_registration'], 5, 3);
+
+        WP_TurnSite_Comments::boot();
+        WP_TurnSite_Contact::boot();
+        WP_TurnSite_WooCommerce::boot();
+        WP_TurnSite_Multisite::boot();
     }
 
     public static function activate(): void
@@ -99,6 +104,11 @@ final class WP_TurnSite
             'theme' => 'auto',
             'size' => 'normal',
             'scale' => '100',
+            'protect_comments' => '1',
+            'protect_contact' => '1',
+            'protect_woocommerce' => '1',
+            'protect_multisite' => '1',
+            'contact_recipient' => sanitize_email((string) get_option('admin_email')),
         ];
     }
 
@@ -207,6 +217,14 @@ final class WP_TurnSite
             $scale = '100';
         }
 
+        $contact_recipient = isset($input['contact_recipient'])
+            ? sanitize_email((string) $input['contact_recipient'])
+            : sanitize_email((string) $existing['contact_recipient']);
+        if ($contact_recipient === '') {
+            add_settings_error(self::SETTINGS_OPTION, 'invalid_contact_recipient', __('L’adresse de réception du formulaire de contact est invalide.', 'wp-turnsite'));
+            $contact_recipient = sanitize_email((string) $existing['contact_recipient']);
+        }
+
         return [
             'site_key' => $site_key,
             'hostname' => $hostname,
@@ -216,6 +234,11 @@ final class WP_TurnSite
             'theme' => $theme,
             'size' => $size,
             'scale' => $scale,
+            'protect_comments' => empty($input['protect_comments']) ? '0' : '1',
+            'protect_contact' => empty($input['protect_contact']) ? '0' : '1',
+            'protect_woocommerce' => empty($input['protect_woocommerce']) ? '0' : '1',
+            'protect_multisite' => empty($input['protect_multisite']) ? '0' : '1',
+            'contact_recipient' => $contact_recipient,
         ];
     }
 
@@ -326,6 +349,22 @@ final class WP_TurnSite
                                 <option value="75" <?php selected($settings['scale'], '75'); ?>>75 %</option>
                             </select>
                             <p class="description"><?php esc_html_e('Appliquée aux tailles normale et compacte. La taille flexible utilise toujours toute la largeur disponible.', 'wp-turnsite'); ?></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><?php esc_html_e('Modules complémentaires', 'wp-turnsite'); ?></th>
+                        <td>
+                            <p><label><input type="checkbox" name="<?php echo esc_attr(self::SETTINGS_OPTION); ?>[protect_comments]" value="1" <?php checked($settings['protect_comments'], '1'); ?>> <?php esc_html_e('Commentaires WordPress et avis produits', 'wp-turnsite'); ?></label></p>
+                            <p><label><input type="checkbox" name="<?php echo esc_attr(self::SETTINGS_OPTION); ?>[protect_contact]" value="1" <?php checked($settings['protect_contact'], '1'); ?>> <?php esc_html_e('Formulaire de contact WP TurnSite', 'wp-turnsite'); ?></label></p>
+                            <p><label><input type="checkbox" name="<?php echo esc_attr(self::SETTINGS_OPTION); ?>[protect_woocommerce]" value="1" <?php checked($settings['protect_woocommerce'], '1'); ?>> <?php esc_html_e('WooCommerce classique', 'wp-turnsite'); ?></label></p>
+                            <p><label><input type="checkbox" name="<?php echo esc_attr(self::SETTINGS_OPTION); ?>[protect_multisite]" value="1" <?php checked($settings['protect_multisite'], '1'); ?>> <?php esc_html_e('Inscriptions WordPress Multisite', 'wp-turnsite'); ?></label></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><label for="turnsite-contact-recipient"><?php esc_html_e('Destinataire du formulaire de contact', 'wp-turnsite'); ?></label></th>
+                        <td>
+                            <input id="turnsite-contact-recipient" class="regular-text" type="email" name="<?php echo esc_attr(self::SETTINGS_OPTION); ?>[contact_recipient]" value="<?php echo esc_attr((string) $settings['contact_recipient']); ?>">
+                            <p class="description"><?php esc_html_e('Utilisez le shortcode [wp_turnsite_contact_form] dans une page.', 'wp-turnsite'); ?></p>
                         </td>
                     </tr>
                 </table>
@@ -457,7 +496,7 @@ final class WP_TurnSite
         return isset($_REQUEST['action']) ? sanitize_key((string) $_REQUEST['action']) : 'login';
     }
 
-    private static function action_enabled(string $action): bool
+    public static function action_enabled(string $action): bool
     {
         if (!self::is_configured()) {
             return false;
@@ -474,6 +513,20 @@ final class WP_TurnSite
 
         if ($action === 'fr_registration') {
             return $settings['protect_registration'] === '1';
+        }
+
+        $module_actions = [
+            'wp_comment' => 'protect_comments',
+            'wp_contact' => 'protect_contact',
+            'woo_login' => 'protect_woocommerce',
+            'woo_registration' => 'protect_woocommerce',
+            'woo_checkout' => 'protect_woocommerce',
+            'wp_multisite_user' => 'protect_multisite',
+            'wp_multisite_site' => 'protect_multisite',
+        ];
+
+        if (isset($module_actions[$action])) {
+            return $settings[$module_actions[$action]] === '1';
         }
 
         return false;
@@ -493,6 +546,11 @@ final class WP_TurnSite
             return;
         }
 
+        self::enqueue_public_script();
+    }
+
+    public static function enqueue_public_script(): void
+    {
         wp_enqueue_script(
             'turnsite-cloudflare',
             'https://challenges.cloudflare.com/turnstile/v0/api.js',
@@ -511,11 +569,13 @@ final class WP_TurnSite
         return str_replace(' src=', ' async defer src=', $tag);
     }
 
-    private static function render_widget(string $action): void
+    public static function render_widget(string $action, string $response_field = 'cf-turnstile-response'): void
     {
         if (!self::action_enabled($action)) {
             return;
         }
+
+        self::enqueue_public_script();
 
         $settings = self::settings();
         $size = (string) $settings['size'];
@@ -532,13 +592,14 @@ final class WP_TurnSite
             : sprintf('transform:scale(%.2F);transform-origin:top left', $scale);
 
         printf(
-            '<div class="turnsite-widget-wrap turnsite-size-%4$s" style="%5$s"><div class="cf-turnstile turnsite-widget" style="%6$s" data-sitekey="%1$s" data-action="%2$s" data-theme="%3$s" data-size="%4$s"></div></div>',
+            '<div class="turnsite-widget-wrap turnsite-size-%4$s" style="%5$s"><div class="cf-turnstile turnsite-widget" style="%6$s" data-sitekey="%1$s" data-action="%2$s" data-theme="%3$s" data-size="%4$s" data-response-field-name="%7$s"></div></div>',
             esc_attr((string) $settings['site_key']),
             esc_attr($action),
             esc_attr((string) $settings['theme']),
             esc_attr($size),
             esc_attr($wrapper_style),
-            esc_attr($widget_style)
+            esc_attr($widget_style),
+            esc_attr($response_field)
         );
         echo '<style>.turnsite-widget-wrap{margin:16px auto}.turnsite-size-flexible{margin-left:0;margin-right:0}</style>';
     }
@@ -604,7 +665,7 @@ final class WP_TurnSite
             : new WP_Error('turnsite_invalid_json', __('Réponse Cloudflare invalide.', 'wp-turnsite'));
     }
 
-    private static function verify(string $expected_action)
+    public static function verify(string $expected_action, string $response_field = 'cf-turnstile-response')
     {
         if (array_key_exists($expected_action, self::$verification_cache)) {
             return self::$verification_cache[$expected_action];
@@ -614,8 +675,8 @@ final class WP_TurnSite
             return self::$verification_cache[$expected_action] = true;
         }
 
-        $token = isset($_POST['cf-turnstile-response'])
-            ? sanitize_text_field(wp_unslash((string) $_POST['cf-turnstile-response']))
+        $token = isset($_POST[$response_field])
+            ? sanitize_text_field(wp_unslash((string) $_POST[$response_field]))
             : '';
 
         if ($token === '' || strlen($token) > 2048) {
@@ -674,5 +735,11 @@ final class WP_TurnSite
         }
 
         return $errors;
+    }
+
+    public static function get_setting(string $key, $default = null)
+    {
+        $settings = self::settings();
+        return array_key_exists($key, $settings) ? $settings[$key] : $default;
     }
 }

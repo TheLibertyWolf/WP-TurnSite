@@ -1,0 +1,45 @@
+name: Rapport de bug
+description: Signaler un dysfonctionnement reproductible de WP TurnSite
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "Ne publiez jamais de clé secrète ni de vulnérabilité exploitable ici."
+  - type: input
+    id: version
+    attributes:
+      label: Version de WP TurnSite
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Versions WordPress, PHP et WooCommerce
+    validations:
+      required: true
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module concerné
+      options:
+        - WordPress natif
+        - Commentaires
+        - Contact
+        - WooCommerce
+        - Multisite
+        - Administration
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Étapes de reproduction
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Résultat attendu et résultat obtenu
+    validations:
+      required: true

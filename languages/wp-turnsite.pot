@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: WP TurnSite 1.1.0\n"
+"Project-Id-Version: WP TurnSite 1.2.0\n"
 "Report-Msgid-Bugs-To: https://github.com/TheLibertyWolf/WP-TurnSite/issues\n"
-"POT-Creation-Date: 2026-08-13 00:07+0200\n"
+"POT-Creation-Date: 2026-08-13 00:17+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 msgid "Accès refusé."
 msgstr ""
 
-msgid "Ajoute Cloudflare Turnstile à la connexion et à la récupération de mot de passe WordPress."
+msgid "Adresse e-mail"
 msgstr ""
 
 msgid "Afficher la clé secrète"
@@ -78,6 +78,12 @@ msgstr ""
 msgid "Clé secrète valide"
 msgstr ""
 
+msgid "Commentaire refusé"
+msgstr ""
+
+msgid "Commentaires WordPress et avis produits"
+msgstr ""
+
 msgid "Compacte — 150 × 140 px"
 msgstr ""
 
@@ -87,10 +93,19 @@ msgstr ""
 msgid "Consulter la documentation Cloudflare"
 msgstr ""
 
+msgid "Destinataire du formulaire de contact"
+msgstr ""
+
 msgid "Enregistrez une clé secrète avant de lancer le test."
 msgstr ""
 
+msgid "Envoyer"
+msgstr ""
+
 msgid "Flexible — largeur du formulaire"
+msgstr ""
+
+msgid "Formulaire de contact WP TurnSite"
 msgstr ""
 
 msgid "Formulaires protégés"
@@ -103,6 +118,9 @@ msgid "Impossible de récupérer la clé secrète."
 msgstr ""
 
 msgid "Inscription"
+msgstr ""
+
+msgid "Inscriptions WordPress Multisite"
 msgstr ""
 
 msgid "La clé de site est publique. La clé secrète doit rester privée."
@@ -130,22 +148,40 @@ msgstr ""
 msgid "Le format de la clé secrète est invalide."
 msgstr ""
 
+msgid "Le message n’a pas pu être envoyé. Vérifiez les champs et réessayez."
+msgstr ""
+
 msgid "Le nom d’hôte attendu est invalide."
 msgstr ""
 
 msgid "Les tailles normale et compacte sont centrées dans le formulaire."
 msgstr ""
 
+msgid "L’adresse de réception du formulaire de contact est invalide."
+msgstr ""
+
 msgid "Masquer la clé secrète"
 msgstr ""
 
+msgid "Message"
+msgstr ""
+
+msgid "Modules complémentaires"
+msgstr ""
+
 msgid "Mot de passe perdu"
+msgstr ""
+
+msgid "Nom"
 msgstr ""
 
 msgid "Nom d’hôte attendu"
 msgstr ""
 
 msgid "Normale — 300 × 65 px"
+msgstr ""
+
+msgid "Objet"
 msgstr ""
 
 msgid "Obtenir les clés Cloudflare"
@@ -186,7 +222,13 @@ msgstr ""
 msgid "Tester à nouveau"
 msgstr ""
 
+msgid "Utilisez le shortcode [wp_turnsite_contact_form] dans une page."
+msgstr ""
+
 msgid "Voir le projet sur GitHub"
+msgstr ""
+
+msgid "Votre message a bien été envoyé."
 msgstr ""
 
 msgid "WP TurnSite"
@@ -196,6 +238,9 @@ msgstr ""
 msgid ""
 "WP TurnSite est actif mais incomplet. <a href=\"%s\">Configurer les clés "
 "Cloudflare</a>."
+msgstr ""
+
+msgid "WooCommerce classique"
 msgstr ""
 
 msgid "Échelle du widget"

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WP TurnSite 1.1.0\n"
+"Project-Id-Version: WP TurnSite 1.2.0\n"
 "Report-Msgid-Bugs-To: https://github.com/TheLibertyWolf/WP-TurnSite/issues\n"
-"POT-Creation-Date: 2026-08-13 00:07+0200\n"
+"POT-Creation-Date: 2026-08-13 00:15+0200\n"
 "PO-Revision-Date: 2026-08-13 00:07+0200\n"
 "Last-Translator: SAS Jessy System <contact@jessysystem.com>\n"
 "Language-Team: Portuguese\n"
@@ -14,8 +14,8 @@ msgstr ""
 msgid "Accès refusé."
 msgstr "Acesso negado."
 
-msgid "Ajoute Cloudflare Turnstile à la connexion et à la récupération de mot de passe WordPress."
-msgstr "Adiciona o Cloudflare Turnstile ao início de sessão e à recuperação de palavra-passe do WordPress."
+msgid "Adresse e-mail"
+msgstr "Endereço de email"
 
 msgid "Afficher la clé secrète"
 msgstr "Mostrar a chave secreta"
@@ -76,6 +76,12 @@ msgstr "Chave secreta recusada pela Cloudflare"
 msgid "Clé secrète valide"
 msgstr "Chave secreta válida"
 
+msgid "Commentaire refusé"
+msgstr "Comentário recusado"
+
+msgid "Commentaires WordPress et avis produits"
+msgstr "Comentários do WordPress e avaliações de produtos"
+
 msgid "Compacte — 150 × 140 px"
 msgstr "Compacto — 150 × 140 px"
 
@@ -85,11 +91,20 @@ msgstr "Início de sessão"
 msgid "Consulter la documentation Cloudflare"
 msgstr "Consultar a documentação da Cloudflare"
 
+msgid "Destinataire du formulaire de contact"
+msgstr "Destinatário do formulário de contacto"
+
 msgid "Enregistrez une clé secrète avant de lancer le test."
 msgstr "Guarde uma chave secreta antes de executar o teste."
 
+msgid "Envoyer"
+msgstr "Enviar"
+
 msgid "Flexible — largeur du formulaire"
 msgstr "Flexível — largura do formulário"
+
+msgid "Formulaire de contact WP TurnSite"
+msgstr "Formulário de contacto WP TurnSite"
 
 msgid "Formulaires protégés"
 msgstr "Formulários protegidos"
@@ -102,6 +117,9 @@ msgstr "Não foi possível obter a chave secreta."
 
 msgid "Inscription"
 msgstr "Registo"
+
+msgid "Inscriptions WordPress Multisite"
+msgstr "Registos do WordPress Multisite"
 
 msgid "La clé de site est publique. La clé secrète doit rester privée."
 msgstr "A chave do site é pública. A chave secreta deve permanecer privada."
@@ -132,23 +150,41 @@ msgstr "O formato da chave do site é inválido."
 msgid "Le format de la clé secrète est invalide."
 msgstr "O formato da chave secreta é inválido."
 
+msgid "Le message n’a pas pu être envoyé. Vérifiez les champs et réessayez."
+msgstr "Não foi possível enviar a mensagem. Verifique os campos e tente novamente."
+
 msgid "Le nom d’hôte attendu est invalide."
 msgstr "O nome de anfitrião esperado é inválido."
 
 msgid "Les tailles normale et compacte sont centrées dans le formulaire."
 msgstr "Os tamanhos normal e compacto são centrados no formulário."
 
+msgid "L’adresse de réception du formulaire de contact est invalide."
+msgstr "O endereço de destino do formulário de contacto é inválido."
+
 msgid "Masquer la clé secrète"
 msgstr "Ocultar a chave secreta"
 
+msgid "Message"
+msgstr "Mensagem"
+
+msgid "Modules complémentaires"
+msgstr "Módulos adicionais"
+
 msgid "Mot de passe perdu"
 msgstr "Palavra-passe perdida"
+
+msgid "Nom"
+msgstr "Nome"
 
 msgid "Nom d’hôte attendu"
 msgstr "Nome de anfitrião esperado"
 
 msgid "Normale — 300 × 65 px"
 msgstr "Normal — 300 × 65 px"
+
+msgid "Objet"
+msgstr "Assunto"
 
 msgid "Obtenir les clés Cloudflare"
 msgstr "Obter as chaves da Cloudflare"
@@ -191,8 +227,14 @@ msgstr "Tamanho do widget"
 msgid "Tester à nouveau"
 msgstr "Testar novamente"
 
+msgid "Utilisez le shortcode [wp_turnsite_contact_form] dans une page."
+msgstr "Utilize o shortcode [wp_turnsite_contact_form] numa página."
+
 msgid "Voir le projet sur GitHub"
 msgstr "Ver o projeto no GitHub"
+
+msgid "Votre message a bien été envoyé."
+msgstr "A sua mensagem foi enviada com sucesso."
 
 msgid "WP TurnSite"
 msgstr "WP TurnSite"
@@ -205,8 +247,18 @@ msgstr ""
 "O WP TurnSite está ativo mas incompleto. <a href=\"%s\">Configure as chaves "
 "da Cloudflare</a>."
 
+msgid "WooCommerce classique"
+msgstr "WooCommerce clássico"
+
 msgid "Échelle du widget"
 msgstr "Escala do widget"
 
 msgid "État de la clé secrète"
 msgstr "Estado da chave secreta"
+
+#~ msgid ""
+#~ "Ajoute Cloudflare Turnstile à la connexion et à la récupération de mot de "
+#~ "passe WordPress."
+#~ msgstr ""
+#~ "Adiciona o Cloudflare Turnstile ao início de sessão e à recuperação de "
+#~ "palavra-passe do WordPress."

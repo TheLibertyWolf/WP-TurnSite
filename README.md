@@ -1,6 +1,11 @@
 # WP TurnSite
 
-WP TurnSite ajoute Cloudflare Turnstile aux formulaires de connexion et de récupération de mot de passe WordPress.
+WP TurnSite ajoute Cloudflare Turnstile aux formulaires sensibles de WordPress avec validation obligatoire côté serveur.
+
+[![Version](https://img.shields.io/badge/version-1.2.0-2271b1)](https://github.com/TheLibertyWolf/WP-TurnSite/releases)
+[![PHP](https://img.shields.io/badge/PHP-%3E%3D%208.1-777bb4)](https://www.php.net/)
+[![License](https://img.shields.io/badge/license-GPL--2.0--or--later-46b450)](LICENSE)
+[![Languages](https://img.shields.io/badge/languages-FR%20%7C%20EN%20%7C%20DE%20%7C%20IT%20%7C%20ES%20%7C%20PT-f48120)](#langues)
 
 ## Fonctionnalités
 
@@ -17,12 +22,41 @@ WP TurnSite ajoute Cloudflare Turnstile aux formulaires de connexion et de récu
 - page placée sous `Réglages → WP TurnSite` et protégée par `manage_wp_turnsite` ;
 - échec fermé en cas d’erreur Cloudflare lorsqu’une protection est configurée.
 - interface traduite en français, anglais, allemand, italien, espagnol et portugais.
+- commentaires WordPress et avis produits WooCommerce ;
+- formulaire de contact intégré via `[wp_turnsite_contact_form]` ;
+- formulaires classiques WooCommerce : connexion, inscription, mot de passe perdu et commande ;
+- inscription d’utilisateurs et de sites WordPress Multisite.
+
+## Modules 1.2
+
+Chaque module est activable séparément dans `Réglages → WP TurnSite`.
+
+| Module | Protection |
+|---|---|
+| WordPress | Connexion, mot de passe perdu et inscription |
+| Commentaires | Commentaires natifs et avis produits WooCommerce |
+| Contact | Formulaire sécurisé fourni par le shortcode `[wp_turnsite_contact_form]` |
+| WooCommerce | Formulaires classiques du compte et checkout classique |
+| Multisite | Inscription d’un utilisateur et création d’un site via `wp-signup.php` |
+
+Le checkout WooCommerce basé sur les **Checkout Blocks** utilise une API JavaScript différente et n’est pas couvert par le module checkout classique de la version 1.2.
+
+## Langues
+
+WP TurnSite suit automatiquement la langue WordPress du site ou du profil administrateur. Les catalogues `.po` et `.mo` inclus couvrent :
+
+- français (langue source) ;
+- anglais (`en_US`) ;
+- allemand (`de_DE`) ;
+- italien (`it_IT`) ;
+- espagnol (`es_ES`) ;
+- portugais (`pt_PT`).
 
 ## Installation
 
 1. Copier le dossier `wp-turnsite` dans `wp-content/plugins/`.
 2. Activer **WP TurnSite**.
-3. Ouvrir le menu **WP TurnSite** dans l’administration.
+3. Ouvrir **Réglages → WP TurnSite** dans l’administration.
 4. Saisir la clé de site, la clé secrète et le nom d’hôte autorisé.
 5. Enregistrer puis tester la clé secrète.
 
@@ -34,9 +68,19 @@ La capability `manage_wp_turnsite` est attribuée automatiquement au rôle Admin
 
 Cloudflare doit autoriser le domaine utilisé par le site. Le serveur doit pouvoir joindre `https://challenges.cloudflare.com` en HTTPS.
 
+Pour le formulaire de contact, renseignez son destinataire puis insérez `[wp_turnsite_contact_form]` dans une page.
+
 ## Sécurité
 
 Les jetons sont validés côté serveur. La clé secrète n’est jamais rendue dans les pages publiques. Pour signaler une vulnérabilité, contactez SAS Jessy System via [jessysystem.com](https://jessysystem.com).
+
+Consultez également [SECURITY.md](SECURITY.md) avant de signaler publiquement une vulnérabilité.
+
+## Contribution et support
+
+- [Guide de contribution](CONTRIBUTING.md)
+- [Support](SUPPORT.md)
+- [Code de conduite](CODE_OF_CONDUCT.md)
 
 ## Auteur
 

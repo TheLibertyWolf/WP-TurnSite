@@ -2,6 +2,16 @@
 
 Toutes les modifications notables de ce projet sont documentées ici.
 
+## [1.2.0] - 2026-08-13
+
+- Protection optionnelle des commentaires WordPress et avis produits WooCommerce.
+- Formulaire de contact sécurisé via `[wp_turnsite_contact_form]` avec nonce, honeypot et destinataire configurable.
+- Protection des formulaires classiques WooCommerce : connexion, inscription, mot de passe perdu et checkout.
+- Protection des inscriptions d’utilisateurs et de sites WordPress Multisite.
+- Actions et champs de réponse Turnstile distincts pour les formulaires présents sur une même page.
+- Chargeur tolérant aux fichiers de modules absents ou illisibles.
+- Documentation multilingue et fichiers communautaires GitHub enrichis.
+
 ## [1.1.0] - 2026-08-13
 
 - Ajout des traductions anglaise, allemande, italienne, espagnole et portugaise.

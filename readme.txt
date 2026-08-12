@@ -4,17 +4,21 @@ Tags: cloudflare, turnstile, login, security, captcha
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Cloudflare Turnstile pour la connexion, la récupération de mot de passe et l’inscription WordPress.
+Cloudflare Turnstile pour WordPress, commentaires, contact, WooCommerce et Multisite.
 
 == Description ==
 
 WP TurnSite protège les formulaires sensibles avec une validation Cloudflare obligatoire côté serveur. Il vérifie également l’action et le nom d’hôte associés au jeton.
 
 La configuration se fait depuis le menu WP TurnSite de l’administration WordPress.
+
+La version 1.2 protège également les commentaires et avis produits, fournit un formulaire de contact par shortcode, prend en charge les formulaires WooCommerce classiques et les inscriptions WordPress Multisite.
+
+Langues incluses : français, anglais, allemand, italien, espagnol et portugais.
 
 == Installation ==
 
@@ -24,6 +28,13 @@ La configuration se fait depuis le menu WP TurnSite de l’administration WordPr
 4. Enregistrer les clés Cloudflare et le nom d’hôte.
 
 == Changelog ==
+
+= 1.2.0 =
+* Protection des commentaires WordPress et avis produits.
+* Formulaire de contact intégré par shortcode.
+* Protection des formulaires WooCommerce classiques.
+* Protection des inscriptions WordPress Multisite.
+* Fichiers communautaires GitHub et documentation enrichie.
 
 = 1.1.0 =
 * Traductions anglaise, allemande, italienne, espagnole et portugaise.

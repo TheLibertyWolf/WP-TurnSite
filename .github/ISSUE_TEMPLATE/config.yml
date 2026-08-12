@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Politique de sécurité
+    url: https://github.com/TheLibertyWolf/WP-TurnSite/blob/main/SECURITY.md
+    about: Procédure privée pour signaler une vulnérabilité
+  - name: Documentation Cloudflare Turnstile
+    url: https://developers.cloudflare.com/turnstile/
+    about: Documentation officielle Cloudflare

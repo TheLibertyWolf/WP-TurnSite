@@ -1,0 +1,17 @@
+name: Demande d’évolution
+description: Proposer une amélioration de WP TurnSite
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: Besoin ou problème rencontré
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Solution proposée
+    validations:
+      required: true

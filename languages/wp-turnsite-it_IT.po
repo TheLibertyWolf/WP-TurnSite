@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WP TurnSite 1.1.0\n"
+"Project-Id-Version: WP TurnSite 1.2.0\n"
 "Report-Msgid-Bugs-To: https://github.com/TheLibertyWolf/WP-TurnSite/issues\n"
-"POT-Creation-Date: 2026-08-13 00:07+0200\n"
+"POT-Creation-Date: 2026-08-13 00:15+0200\n"
 "PO-Revision-Date: 2026-08-13 00:07+0200\n"
 "Last-Translator: SAS Jessy System <contact@jessysystem.com>\n"
 "Language-Team: Italian\n"
@@ -14,8 +14,8 @@ msgstr ""
 msgid "Accès refusé."
 msgstr "Accesso negato."
 
-msgid "Ajoute Cloudflare Turnstile à la connexion et à la récupération de mot de passe WordPress."
-msgstr "Aggiunge Cloudflare Turnstile all’accesso e al recupero della password di WordPress."
+msgid "Adresse e-mail"
+msgstr "Indirizzo email"
 
 msgid "Afficher la clé secrète"
 msgstr "Mostra la chiave segreta"
@@ -76,6 +76,12 @@ msgstr "Chiave segreta rifiutata da Cloudflare"
 msgid "Clé secrète valide"
 msgstr "Chiave segreta valida"
 
+msgid "Commentaire refusé"
+msgstr "Commento rifiutato"
+
+msgid "Commentaires WordPress et avis produits"
+msgstr "Commenti WordPress e recensioni dei prodotti"
+
 msgid "Compacte — 150 × 140 px"
 msgstr "Compatta — 150 × 140 px"
 
@@ -85,11 +91,20 @@ msgstr "Accesso"
 msgid "Consulter la documentation Cloudflare"
 msgstr "Consulta la documentazione Cloudflare"
 
+msgid "Destinataire du formulaire de contact"
+msgstr "Destinatario del modulo di contatto"
+
 msgid "Enregistrez une clé secrète avant de lancer le test."
 msgstr "Salva una chiave segreta prima di avviare il test."
 
+msgid "Envoyer"
+msgstr "Invia"
+
 msgid "Flexible — largeur du formulaire"
 msgstr "Flessibile — larghezza del modulo"
+
+msgid "Formulaire de contact WP TurnSite"
+msgstr "Modulo di contatto WP TurnSite"
 
 msgid "Formulaires protégés"
 msgstr "Moduli protetti"
@@ -102,6 +117,9 @@ msgstr "Impossibile recuperare la chiave segreta."
 
 msgid "Inscription"
 msgstr "Registrazione"
+
+msgid "Inscriptions WordPress Multisite"
+msgstr "Registrazioni WordPress Multisite"
 
 msgid "La clé de site est publique. La clé secrète doit rester privée."
 msgstr ""
@@ -133,23 +151,41 @@ msgstr "Il formato della chiave del sito non è valido."
 msgid "Le format de la clé secrète est invalide."
 msgstr "Il formato della chiave segreta non è valido."
 
+msgid "Le message n’a pas pu être envoyé. Vérifiez les champs et réessayez."
+msgstr "Impossibile inviare il messaggio. Controlla i campi e riprova."
+
 msgid "Le nom d’hôte attendu est invalide."
 msgstr "Il nome host previsto non è valido."
 
 msgid "Les tailles normale et compacte sont centrées dans le formulaire."
 msgstr "Le dimensioni normale e compatta sono centrate nel modulo."
 
+msgid "L’adresse de réception du formulaire de contact est invalide."
+msgstr "L’indirizzo del destinatario del modulo di contatto non è valido."
+
 msgid "Masquer la clé secrète"
 msgstr "Nascondi la chiave segreta"
 
+msgid "Message"
+msgstr "Messaggio"
+
+msgid "Modules complémentaires"
+msgstr "Moduli aggiuntivi"
+
 msgid "Mot de passe perdu"
 msgstr "Password dimenticata"
+
+msgid "Nom"
+msgstr "Nome"
 
 msgid "Nom d’hôte attendu"
 msgstr "Nome host previsto"
 
 msgid "Normale — 300 × 65 px"
 msgstr "Normale — 300 × 65 px"
+
+msgid "Objet"
+msgstr "Oggetto"
 
 msgid "Obtenir les clés Cloudflare"
 msgstr "Ottieni le chiavi Cloudflare"
@@ -191,8 +227,14 @@ msgstr "Dimensione del widget"
 msgid "Tester à nouveau"
 msgstr "Verifica di nuovo"
 
+msgid "Utilisez le shortcode [wp_turnsite_contact_form] dans une page."
+msgstr "Usa lo shortcode [wp_turnsite_contact_form] in una pagina."
+
 msgid "Voir le projet sur GitHub"
 msgstr "Visualizza il progetto su GitHub"
+
+msgid "Votre message a bien été envoyé."
+msgstr "Il tuo messaggio è stato inviato correttamente."
 
 msgid "WP TurnSite"
 msgstr "WP TurnSite"
@@ -205,8 +247,18 @@ msgstr ""
 "WP TurnSite è attivo ma incompleto. <a href=\"%s\">Configura le chiavi "
 "Cloudflare</a>."
 
+msgid "WooCommerce classique"
+msgstr "WooCommerce classico"
+
 msgid "Échelle du widget"
 msgstr "Scala del widget"
 
 msgid "État de la clé secrète"
 msgstr "Stato della chiave segreta"
+
+#~ msgid ""
+#~ "Ajoute Cloudflare Turnstile à la connexion et à la récupération de mot de "
+#~ "passe WordPress."
+#~ msgstr ""
+#~ "Aggiunge Cloudflare Turnstile all’accesso e al recupero della password di "
+#~ "WordPress."
