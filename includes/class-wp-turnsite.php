@@ -41,7 +41,6 @@ final class WP_TurnSite
         add_filter('registration_errors', [self::class, 'protect_registration'], 5, 3);
 
         WP_TurnSite_Comments::boot();
-        WP_TurnSite_Contact::boot();
         WP_TurnSite_WooCommerce::boot();
         WP_TurnSite_Multisite::boot();
     }
@@ -71,8 +70,17 @@ final class WP_TurnSite
 
     public static function maybe_upgrade(): void
     {
-        if (get_option('wp_turnsite_version') === WP_TURNSITE_VERSION) {
+        $installed_version = (string) get_option('wp_turnsite_version', '0.0.0');
+        if ($installed_version === WP_TURNSITE_VERSION) {
             return;
+        }
+
+        if (version_compare($installed_version, '1.2.1', '<')) {
+            $settings = get_option(self::SETTINGS_OPTION, []);
+            if (is_array($settings)) {
+                unset($settings['protect_contact'], $settings['contact_recipient']);
+                update_option(self::SETTINGS_OPTION, $settings, false);
+            }
         }
 
         self::grant_administrator_capability();
@@ -105,10 +113,8 @@ final class WP_TurnSite
             'size' => 'normal',
             'scale' => '100',
             'protect_comments' => '1',
-            'protect_contact' => '1',
             'protect_woocommerce' => '1',
             'protect_multisite' => '1',
-            'contact_recipient' => sanitize_email((string) get_option('admin_email')),
         ];
     }
 
@@ -217,14 +223,6 @@ final class WP_TurnSite
             $scale = '100';
         }
 
-        $contact_recipient = isset($input['contact_recipient'])
-            ? sanitize_email((string) $input['contact_recipient'])
-            : sanitize_email((string) $existing['contact_recipient']);
-        if ($contact_recipient === '') {
-            add_settings_error(self::SETTINGS_OPTION, 'invalid_contact_recipient', __('L’adresse de réception du formulaire de contact est invalide.', 'wp-turnsite'));
-            $contact_recipient = sanitize_email((string) $existing['contact_recipient']);
-        }
-
         return [
             'site_key' => $site_key,
             'hostname' => $hostname,
@@ -235,10 +233,8 @@ final class WP_TurnSite
             'size' => $size,
             'scale' => $scale,
             'protect_comments' => empty($input['protect_comments']) ? '0' : '1',
-            'protect_contact' => empty($input['protect_contact']) ? '0' : '1',
             'protect_woocommerce' => empty($input['protect_woocommerce']) ? '0' : '1',
             'protect_multisite' => empty($input['protect_multisite']) ? '0' : '1',
-            'contact_recipient' => $contact_recipient,
         ];
     }
 
@@ -354,17 +350,9 @@ final class WP_TurnSite
                     <tr>
                         <th scope="row"><?php esc_html_e('Modules complémentaires', 'wp-turnsite'); ?></th>
                         <td>
-                            <p><label><input type="checkbox" name="<?php echo esc_attr(self::SETTINGS_OPTION); ?>[protect_comments]" value="1" <?php checked($settings['protect_comments'], '1'); ?>> <?php esc_html_e('Commentaires WordPress et avis produits', 'wp-turnsite'); ?></label></p>
-                            <p><label><input type="checkbox" name="<?php echo esc_attr(self::SETTINGS_OPTION); ?>[protect_contact]" value="1" <?php checked($settings['protect_contact'], '1'); ?>> <?php esc_html_e('Formulaire de contact WP TurnSite', 'wp-turnsite'); ?></label></p>
+                            <p><label><input type="checkbox" name="<?php echo esc_attr(self::SETTINGS_OPTION); ?>[protect_comments]" value="1" <?php checked($settings['protect_comments'], '1'); ?>> <?php esc_html_e('Commentaires WordPress et avis produits WooCommerce', 'wp-turnsite'); ?></label></p>
                             <p><label><input type="checkbox" name="<?php echo esc_attr(self::SETTINGS_OPTION); ?>[protect_woocommerce]" value="1" <?php checked($settings['protect_woocommerce'], '1'); ?>> <?php esc_html_e('WooCommerce classique', 'wp-turnsite'); ?></label></p>
                             <p><label><input type="checkbox" name="<?php echo esc_attr(self::SETTINGS_OPTION); ?>[protect_multisite]" value="1" <?php checked($settings['protect_multisite'], '1'); ?>> <?php esc_html_e('Inscriptions WordPress Multisite', 'wp-turnsite'); ?></label></p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><label for="turnsite-contact-recipient"><?php esc_html_e('Destinataire du formulaire de contact', 'wp-turnsite'); ?></label></th>
-                        <td>
-                            <input id="turnsite-contact-recipient" class="regular-text" type="email" name="<?php echo esc_attr(self::SETTINGS_OPTION); ?>[contact_recipient]" value="<?php echo esc_attr((string) $settings['contact_recipient']); ?>">
-                            <p class="description"><?php esc_html_e('Utilisez le shortcode [wp_turnsite_contact_form] dans une page.', 'wp-turnsite'); ?></p>
                         </td>
                     </tr>
                 </table>
@@ -517,7 +505,6 @@ final class WP_TurnSite
 
         $module_actions = [
             'wp_comment' => 'protect_comments',
-            'wp_contact' => 'protect_contact',
             'woo_login' => 'protect_woocommerce',
             'woo_registration' => 'protect_woocommerce',
             'woo_checkout' => 'protect_woocommerce',

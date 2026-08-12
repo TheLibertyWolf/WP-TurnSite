@@ -2,10 +2,13 @@
 
 Toutes les modifications notables de ce projet sont documentées ici.
 
+## [1.2.1] - 2026-08-13
+
+- Retrait du formulaire de contact intégré, de son shortcode et de ses réglages.
+
 ## [1.2.0] - 2026-08-13
 
 - Protection optionnelle des commentaires WordPress et avis produits WooCommerce.
-- Formulaire de contact sécurisé via `[wp_turnsite_contact_form]` avec nonce, honeypot et destinataire configurable.
 - Protection des formulaires classiques WooCommerce : connexion, inscription, mot de passe perdu et checkout.
 - Protection des inscriptions d’utilisateurs et de sites WordPress Multisite.
 - Actions et champs de réponse Turnstile distincts pour les formulaires présents sur une même page.

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WP TurnSite 1.2.0\n"
+"Project-Id-Version: WP TurnSite 1.2.1\n"
 "Report-Msgid-Bugs-To: https://github.com/TheLibertyWolf/WP-TurnSite/issues\n"
-"POT-Creation-Date: 2026-08-13 00:15+0200\n"
+"POT-Creation-Date: 2026-08-13 00:22+0200\n"
 "PO-Revision-Date: 2026-08-13 00:07+0200\n"
 "Last-Translator: SAS Jessy System <contact@jessysystem.com>\n"
 "Language-Team: English\n"
@@ -13,9 +13,6 @@ msgstr ""
 
 msgid "Accès refusé."
 msgstr "Access denied."
-
-msgid "Adresse e-mail"
-msgstr "Email address"
 
 msgid "Afficher la clé secrète"
 msgstr "Show secret key"
@@ -78,8 +75,8 @@ msgstr "Valid secret key"
 msgid "Commentaire refusé"
 msgstr "Comment rejected"
 
-msgid "Commentaires WordPress et avis produits"
-msgstr "WordPress comments and product reviews"
+msgid "Commentaires WordPress et avis produits WooCommerce"
+msgstr "WordPress comments and WooCommerce product reviews"
 
 msgid "Compacte — 150 × 140 px"
 msgstr "Compact — 150 × 140 px"
@@ -90,20 +87,11 @@ msgstr "Login"
 msgid "Consulter la documentation Cloudflare"
 msgstr "View Cloudflare documentation"
 
-msgid "Destinataire du formulaire de contact"
-msgstr "Contact form recipient"
-
 msgid "Enregistrez une clé secrète avant de lancer le test."
 msgstr "Save a secret key before running the test."
 
-msgid "Envoyer"
-msgstr "Send"
-
 msgid "Flexible — largeur du formulaire"
 msgstr "Flexible — form width"
-
-msgid "Formulaire de contact WP TurnSite"
-msgstr "WP TurnSite contact form"
 
 msgid "Formulaires protégés"
 msgstr "Protected forms"
@@ -148,23 +136,14 @@ msgstr "The site key format is invalid."
 msgid "Le format de la clé secrète est invalide."
 msgstr "The secret key format is invalid."
 
-msgid "Le message n’a pas pu être envoyé. Vérifiez les champs et réessayez."
-msgstr "The message could not be sent. Check the fields and try again."
-
 msgid "Le nom d’hôte attendu est invalide."
 msgstr "The expected hostname is invalid."
 
 msgid "Les tailles normale et compacte sont centrées dans le formulaire."
 msgstr "Normal and compact sizes are centered in the form."
 
-msgid "L’adresse de réception du formulaire de contact est invalide."
-msgstr "The contact form recipient address is invalid."
-
 msgid "Masquer la clé secrète"
 msgstr "Hide secret key"
-
-msgid "Message"
-msgstr "Message"
 
 msgid "Modules complémentaires"
 msgstr "Additional modules"
@@ -172,17 +151,11 @@ msgstr "Additional modules"
 msgid "Mot de passe perdu"
 msgstr "Lost password"
 
-msgid "Nom"
-msgstr "Name"
-
 msgid "Nom d’hôte attendu"
 msgstr "Expected hostname"
 
 msgid "Normale — 300 × 65 px"
 msgstr "Normal — 300 × 65 px"
-
-msgid "Objet"
-msgstr "Subject"
 
 msgid "Obtenir les clés Cloudflare"
 msgstr "Get Cloudflare keys"
@@ -224,14 +197,8 @@ msgstr "Widget size"
 msgid "Tester à nouveau"
 msgstr "Test again"
 
-msgid "Utilisez le shortcode [wp_turnsite_contact_form] dans une page."
-msgstr "Use the [wp_turnsite_contact_form] shortcode on a page."
-
 msgid "Voir le projet sur GitHub"
 msgstr "View project on GitHub"
-
-msgid "Votre message a bien été envoyé."
-msgstr "Your message was sent successfully."
 
 msgid "WP TurnSite"
 msgstr "WP TurnSite"
@@ -252,8 +219,3 @@ msgstr "Widget scale"
 
 msgid "État de la clé secrète"
 msgstr "Secret key status"
-
-#~ msgid ""
-#~ "Ajoute Cloudflare Turnstile à la connexion et à la récupération de mot de "
-#~ "passe WordPress."
-#~ msgstr "Adds Cloudflare Turnstile to WordPress login and password recovery."

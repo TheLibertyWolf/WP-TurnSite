@@ -23,7 +23,6 @@ WP TurnSite ajoute Cloudflare Turnstile aux formulaires sensibles de WordPress a
 - échec fermé en cas d’erreur Cloudflare lorsqu’une protection est configurée.
 - interface traduite en français, anglais, allemand, italien, espagnol et portugais.
 - commentaires WordPress et avis produits WooCommerce ;
-- formulaire de contact intégré via `[wp_turnsite_contact_form]` ;
 - formulaires classiques WooCommerce : connexion, inscription, mot de passe perdu et commande ;
 - inscription d’utilisateurs et de sites WordPress Multisite.
 
@@ -35,7 +34,6 @@ Chaque module est activable séparément dans `Réglages → WP TurnSite`.
 |---|---|
 | WordPress | Connexion, mot de passe perdu et inscription |
 | Commentaires | Commentaires natifs et avis produits WooCommerce |
-| Contact | Formulaire sécurisé fourni par le shortcode `[wp_turnsite_contact_form]` |
 | WooCommerce | Formulaires classiques du compte et checkout classique |
 | Multisite | Inscription d’un utilisateur et création d’un site via `wp-signup.php` |
 
@@ -67,8 +65,6 @@ L’enregistrement des réglages utilise la Settings API et sa protection anti-C
 La capability `manage_wp_turnsite` est attribuée automatiquement au rôle Administrateur. Elle peut être déléguée finement avec un gestionnaire de rôles sans accorder la gestion générale des options WordPress.
 
 Cloudflare doit autoriser le domaine utilisé par le site. Le serveur doit pouvoir joindre `https://challenges.cloudflare.com` en HTTPS.
-
-Pour le formulaire de contact, renseignez son destinataire puis insérez `[wp_turnsite_contact_form]` dans une page.
 
 ## Sécurité
 
