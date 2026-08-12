@@ -50,6 +50,16 @@ WP TurnSite suit automatiquement la langue WordPress du site ou du profil admini
 - espagnol (`es_ES`) ;
 - portugais (`pt_PT`).
 
+## Captures d’écran
+
+### Configuration dans WordPress
+
+[![Écran de configuration de WP TurnSite](https://i.ibb.co/fVnT3Zrp/Capture-d-e-cran-2026-08-13-a-00-26-12.png)](https://ibb.co/twx10nYs)
+
+### Widget Turnstile sur la page de connexion
+
+[![Widget WP TurnSite sur la connexion WordPress](https://i.ibb.co/bj8XB2Cf/Capture-d-e-cran-2026-08-13-a-00-26-58.png)](https://ibb.co/ZRkx8YFZ)
+
 ## Installation
 
 1. Copier le dossier `wp-turnsite` dans `wp-content/plugins/`.
