@@ -54,11 +54,11 @@ WP TurnSite suit automatiquement la langue WordPress du site ou du profil admini
 
 ### Configuration dans WordPress
 
-<a href="https://i.postimg.cc/ZKpdFH39/Capture-d-e-cran-2026-08-13-a-00-26-58.png"><img src="https://i.postimg.cc/ZKpdFH39/Capture-d-e-cran-2026-08-13-a-00-26-58.png" alt="Écran de configuration de WP TurnSite"></a>
+<a href="https://i.postimg.cc/prNdmNsr/wp-turnsite-01.png"><img src="https://i.postimg.cc/prNdmNsr/wp-turnsite-01.png" alt="Écran de configuration de WP TurnSite"></a>
 
 ### Widget Turnstile sur la page de connexion
 
-<a href="https://i.postimg.cc/MKVQb5RX/Capture-d-e-cran-2026-08-13-a-00-26-12.png"><img src="https://i.postimg.cc/MKVQb5RX/Capture-d-e-cran-2026-08-13-a-00-26-12.png" alt="Widget WP TurnSite sur la connexion WordPress" width="480"></a>
+<a href="https://i.postimg.cc/yxqNDqLD/wp-turnsite-02.png"><img src="https://i.postimg.cc/yxqNDqLD/wp-turnsite-02.png" alt="Widget WP TurnSite sur la connexion WordPress" width="480"></a>
 
 ## Installation
 
