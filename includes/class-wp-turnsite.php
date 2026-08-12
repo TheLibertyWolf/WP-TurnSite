@@ -350,18 +350,6 @@ final class WP_TurnSite
 
                     <div id="postbox-container-1" class="postbox-container">
                         <div class="postbox">
-                            <div class="postbox-header"><h2 class="hndle"><?php esc_html_e('Sécurité de l’administration', 'wp-turnsite'); ?></h2></div>
-                            <div class="inside wp-turnsite-security-status">
-                                <ul>
-                                    <li><span class="dashicons dashicons-yes-alt" aria-hidden="true"></span> <?php esc_html_e('Accès contrôlé par « manage_wp_turnsite ».', 'wp-turnsite'); ?></li>
-                                    <li><span class="dashicons dashicons-yes-alt" aria-hidden="true"></span> <?php esc_html_e('Enregistrement protégé par nonce.', 'wp-turnsite'); ?></li>
-                                    <li><span class="dashicons dashicons-yes-alt" aria-hidden="true"></span> <?php esc_html_e('Affichage du secret protégé par nonce AJAX.', 'wp-turnsite'); ?></li>
-                                </ul>
-                                <p class="description"><?php esc_html_e('Cette aptitude est attribuée aux administrateurs et peut être déléguée avec un gestionnaire de rôles.', 'wp-turnsite'); ?></p>
-                            </div>
-                        </div>
-
-                        <div class="postbox">
                             <div class="postbox-header"><h2 class="hndle"><?php esc_html_e('Obtenir les clés Cloudflare', 'wp-turnsite'); ?></h2></div>
                             <div class="inside">
                                 <ol>
@@ -372,6 +360,24 @@ final class WP_TurnSite
                                 <p><a class="button button-primary" href="https://dash.cloudflare.com/?to=/:account/turnstile" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Ouvrir Cloudflare', 'wp-turnsite'); ?></a></p>
                                 <p><a href="https://developers.cloudflare.com/turnstile/get-started/widget-management/dashboard/" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Consulter la documentation Cloudflare', 'wp-turnsite'); ?></a></p>
                                 <p class="description"><?php esc_html_e('La clé de site est publique. La clé secrète doit rester privée.', 'wp-turnsite'); ?></p>
+                            </div>
+                        </div>
+
+                        <div class="postbox">
+                            <div class="postbox-header"><h2 class="hndle"><?php esc_html_e('Gestion de l’accès', 'wp-turnsite'); ?></h2></div>
+                            <div class="inside">
+                                <p><?php esc_html_e('Pour déléguer la configuration de WP TurnSite avec un gestionnaire de rôles, attribuez l’aptitude :', 'wp-turnsite'); ?></p>
+                                <p><code>manage_wp_turnsite</code></p>
+                                <p class="description"><?php esc_html_e('Cette aptitude est attribuée automatiquement aux administrateurs lors de l’activation.', 'wp-turnsite'); ?></p>
+                            </div>
+                        </div>
+
+                        <div class="postbox">
+                            <div class="postbox-header"><h2 class="hndle"><?php esc_html_e('Auteur', 'wp-turnsite'); ?></h2></div>
+                            <div class="inside">
+                                <p><strong>SAS JESSY SYSTEM</strong></p>
+                                <p><a href="https://jessysystem.com" target="_blank" rel="noopener noreferrer">jessysystem.com</a></p>
+                                <p><a class="button" href="https://github.com/TheLibertyWolf/WP-TurnSite" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Voir le projet sur GitHub', 'wp-turnsite'); ?></a></p>
                             </div>
                         </div>
                     </div>

@@ -36,17 +36,6 @@
     margin-bottom: 0;
 }
 
-.wp-turnsite-security-status li {
-    align-items: center;
-    display: flex;
-    gap: 6px;
-}
-
-.wp-turnsite-security-status .dashicons {
-    color: #008a20;
-    flex: 0 0 auto;
-}
-
 @media screen and (max-width: 850px) {
     .wp-turnsite-poststuff #post-body.columns-2 #postbox-container-1 {
         margin-right: 0;
